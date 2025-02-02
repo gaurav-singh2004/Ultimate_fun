@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Ultimate Game Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Ultimate Game Hub 🎮</h1>
+        <h3>Select a game to play:</h3>
+
+        <!-- Game Selection -->
+        <div id="mainMenu" class="game-selection">
+            <button id="guessingGameBtn">🔢 Number Guessing</button>
+            <button id="ticTacToeBtn">❌⭕ Tic-Tac-Toe</button>
+            <button id="rockPaperScissorsBtn">✊🖐✌ Rock Paper Scissors</button>
+        </div>
+
+        <!-- Scoreboard -->
+<div class="scoreboard" id="scoreboard">
+    <h2>🏆 Scoreboard</h2>
+    <p>Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span> | Draws: <span id="draws">0</span> | <span><button id="resetBtn">Reset</button> </span></p>
+    <!-- <button id="resetBtn">Reset</button> -->
+</div>
+
+
+        <!-- Number Guessing Game -->
+        <div id="guessNumber" class="game-container">
+            <h2>🔢 Number Guessing Game</h2>
+            <p>Guess a number between 1 and 100</p>
+            <input type="number" id="guessInput" placeholder="Enter your guess">
+            <button id="submitButton">Submit</button>
+            <p id="guessResult"></p>
+            <p id="attemptsDisplay" style="font-size: 20px; font-weight: bold;">🔢 Attempts: 0</p>
+            <button id="backToMenu">⬅ Back</button>
+            <button id="restartButton" style="display: none;">🔄 Restart</button>
+        </div>
+
+        <!-- Tic Tac Toe -->
+        <div id="ticTacToe" class="game-container">
+            <h2>❌⭕ Tic-Tac-Toe</h2>
+            <div id="ticTacToe-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <p id="ticTacToe-status">Your turn, Player X!</p>
+            <button onclick="resetTicTacToe()">Restart</button>
+            <button id="backToMenu">⬅ Back</button>
+        </div>
+
+        <!-- Rock Paper Scissors -->
+    <div id="rockPaperScissors" class="game-container">
+        <h2>✊🖐✌ Rock Paper Scissors</h2>
+        <p>Choose your move:</p>
+        <button id="rockBtn">✊ Rock</button>
+        <button id="paperBtn">🖐 Paper</button>
+        <button id="scissorsBtn">✌ Scissors</button>
+        <p id="rpsResult"></p>
+        <button id="backToMenu">⬅ Back</button>
+        <button id="restartButtonRPS" style="display: none;">🔄 Restart</button>
+    </div>
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
